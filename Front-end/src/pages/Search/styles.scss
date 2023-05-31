@@ -1,0 +1,92 @@
+.search-page {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    transition: opacity 1.5s;
+
+    h1 {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 8rem;
+        margin-top: 5rem;
+    } 
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .flight-number, .date {
+            width: 18rem;
+
+            p {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+        }
+
+        .submit {
+            margin-top: 2rem;
+        }
+    }
+
+    .plane, .cloud1, .cloud2, .cloud3, .cloud4 {
+        position: absolute;
+    }
+
+
+    .plane {
+        right: 12rem;
+        top: 20rem;
+
+        transition: transform 2s;
+
+        &.out {
+            transform: translate(150%, -150%);
+        }
+
+        &.in {
+            transform: translate(0%, 0%);
+        }
+    }
+
+    .cloud1, .cloud2, .cloud3, .cloud4 {
+        transition: transform 1.8s;
+
+        &.out {
+            transform: translateY(205%);
+        }
+
+        &.in {
+            transform: translateY(0%);
+        }
+    }
+
+    .cloud1 {
+        right: 0;
+        bottom: 0;
+    }
+
+    .cloud2 {
+        left: 0;
+        bottom: 0;
+    }
+
+    .cloud3 {
+        top: 12rem;
+        left: 8rem;
+    }
+
+    .cloud4 {
+        top: 35rem;
+        left: 18rem;
+    }
+
+    &.hide {
+        opacity: 0;
+    }
+}
