@@ -7,6 +7,3 @@ cd th2023_aa_frontend
 npm install
 npm start
 ```
-
-## Requirements
-https://github.com/jaejin0/th2023_aa_backend
